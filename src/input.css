@@ -1,3 +1,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+}
+.grid {
+  display: grid;
+}
+.grid-cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.gap-4 {
+  gap: 1rem;
+}
+.m-10 {
+  margin: 2.5rem;
+}
+.text-3xl {
+  font-size: 1.875rem;
+}
+.font-bold {
+  font-weight: bold;
+}
+.underline {
+  text-decoration: underline;
+}
+.bg-green-200 {
+  background-color: #61a337;
+  border: 1px solid #000;
+  padding: 0.5rem;
+}
+.p-2 {
+  padding: 0.5rem;
+}
+.rounded-lg {
+  border-radius: 0.75rem;
+}
+.text-white {
+  color: #fff;

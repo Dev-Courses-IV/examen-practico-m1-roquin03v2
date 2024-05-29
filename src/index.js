@@ -14,4 +14,20 @@ const students = [
     { name: "Lorena", age: 34, email: "lorena@email.com" },
     { name: "Constanza", age: 28, email: "constanza@email.com" },
   ];
-  
+const studentsList = document.createElement("ul");
+studentsList.classList.add("grid", "grid-cols-4", "gap-4", "m-10");
+document.body.appendChild(studentsList);
+
+const printButton = document.getElementById("printButton");
+printButton.addEventListener("click", function() {
+  students.forEach(student => {
+    const studentItem = document.createElement("li");
+    const studentContainer = document.createElement("div");
+    studentContainer.textContent = `${student.name} - ${student.age}`;
+    studentContainer.classList.add("bg-green-200", "p-2", "rounded-lg", "border-black");
+    studentItem.appendChild(studentContainer);
+    studentsList.appendChild(studentItem);
+  });
+});
+
+printButton.style.backgroundColor = "#61a337";
